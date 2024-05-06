@@ -16,6 +16,12 @@ public class ImplStudentService implements IStudentService {
 	public ImplStudentService(IStudentRepository studentRepository) {
 		this.studentRepository = studentRepository;
 	}
+	
+	@Override
+	@Transactional(readOnly = true)
+	public Student findById(long id) {
+		return studentRepository.findById(id).orElse(null);
+	}
 
 	@Override
 	@Transactional(readOnly = true)
@@ -28,5 +34,7 @@ public class ImplStudentService implements IStudentService {
 	public Student save(Student student) {	
 		return studentRepository.save(student);
 	}
+
+	
 
 }

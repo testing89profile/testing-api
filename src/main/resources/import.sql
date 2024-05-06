@@ -1,1 +1,2 @@
 INSERT INTO students (name, last_name, email, id_card, create_at) VALUES ('Luisa', 'Jimenez', 'luisa@example.com', 9876543210, '2024-05-06');
+INSERT INTO students (name, last_name, email, id_card, create_at) VALUES ('Fabian', 'Rodriguez', 'fabian@example.com', 778569513, '2024-05-07');
