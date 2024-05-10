@@ -31,10 +31,12 @@ public class ImplStudentService implements IStudentService {
 
 	@Override
 	@Transactional
-	public Student save(Student student) {	
-		return studentRepository.save(student);
+	public void save(Student student) {	
+		studentRepository.save(student);
 	}
 
-	
-
+	@Override
+	public void delete(long id) {
+		studentRepository.deleteById(id);
+	}
 }

@@ -10,5 +10,8 @@ public interface IStudentService {
 	
 	public Student findById(long id);
 	
-	public Student save(Student student);
+	public void save(Student student);
+	
+	public void delete(long id);
+		
 }
