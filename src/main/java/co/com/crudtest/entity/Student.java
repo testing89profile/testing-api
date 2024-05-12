@@ -34,6 +34,16 @@ public class Student implements Serializable{
 	@Column(name = "create_at")
 	private LocalDate createAt;
 	
+	public Student() {}
+	
+	public Student(String name, String lastName, String email, Long idCard) {
+		super();
+		this.name = name;
+		this.lastName = lastName;
+		this.email = email;
+		this.idCard = idCard;
+	}
+
 	@PrePersist
 	public void createAt() {
 		createAt = LocalDate.now();
